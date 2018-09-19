@@ -1,0 +1,60 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3285176, 2016-09-19T13:58:26-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: CoreSansDS15Thin by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-ds/thin/
+ * Copyright: Copyright (c) 2015 by S-Core Co., Ltd.. All rights reserved.
+ * Licensed pageviews: 20,000
+ * 
+ * Webfont: CoreSansDS25Light by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-ds/light/
+ * Copyright: Copyright (c) 2015 by S-Core Co., Ltd.. All rights reserved.
+ * Licensed pageviews: 20,000
+ * 
+ * Webfont: CoreSansDS25LightItalic by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-ds/light-italic/
+ * Copyright: Copyright (c) S-Core Co., Ltd., 2016. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * Webfont: CoreSansDS35Regular by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-ds/regular/
+ * Copyright: Copyright (c) S-Core Co., Ltd., 2016. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * Webfont: CoreSansDS55Bold by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-ds/bold/
+ * Copyright: Copyright (c) S-Core Co., Ltd., 2016. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3285176
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3220b8");
+
+  
+@font-face {font-family: 'CoreSansDS15Thin';src: url('webfonts/3220B8_0_0.eot');src: url('webfonts/3220B8_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3220B8_0_0.woff2') format('woff2'),url('webfonts/3220B8_0_0.woff') format('woff'),url('webfonts/3220B8_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'CoreSansDS25Light';src: url('webfonts/3220B8_1_0.eot');src: url('webfonts/3220B8_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3220B8_1_0.woff2') format('woff2'),url('webfonts/3220B8_1_0.woff') format('woff'),url('webfonts/3220B8_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'CoreSansDS25LightItalic';src: url('webfonts/3220B8_2_0.eot');src: url('webfonts/3220B8_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3220B8_2_0.woff2') format('woff2'),url('webfonts/3220B8_2_0.woff') format('woff'),url('webfonts/3220B8_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'CoreSansDS35Regular';src: url('webfonts/3220B8_3_0.eot');src: url('webfonts/3220B8_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3220B8_3_0.woff2') format('woff2'),url('webfonts/3220B8_3_0.woff') format('woff'),url('webfonts/3220B8_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'CoreSansDS55Bold';src: url('webfonts/3220B8_4_0.eot');src: url('webfonts/3220B8_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3220B8_4_0.woff2') format('woff2'),url('webfonts/3220B8_4_0.woff') format('woff'),url('webfonts/3220B8_4_0.ttf') format('truetype');}
+ 

@@ -1,0 +1,1184 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/* @import must be at top of file, otherwise CSS will not work */
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: "CoreSansDS55Bold"; 
+}
+
+p {
+	font-family:"CoreSansDS25Light";
+	margin:0px;
+}
+
+a {
+	color:$gray;
+	text-decoration:none;
+}
+
+a:focus {
+	outline:none;
+}
+
+a:visited {
+	color:$gray;
+}
+
+a:hover {
+	color:darken($gray, 5%);
+}
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
+	font-family:"CoreSansDS35Regular";
+	color:$gray;
+}
+
+button:active, button:focus {
+	border-color:0px;
+	box-shadow:0px;
+}
+
+//SVG styles
+
+.third #Layer_1 .cls-3:hover {
+	fill:$gold!important;
+}
+
+.services .right ul li #Layer_1 .cls-2:hover {
+	fill:$gold!important;
+}
+
+//loader 
+.scene {
+	background:$gray;
+	z-index:9999999999;
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+
+#dc-spinner {
+	width:250px;
+	margin:0px auto;
+	text-align:center;
+	top:50%;
+	bottom:50%;
+	display:block;
+	position:relative;
+}
+
+//404 
+
+#no-results {
+	min-height:250px;
+
+	  h3 {
+	  	margin-top:200px;
+	  	text-align:center;
+	  	font-family:"CoreSansDS35Regular";
+
+	  }
+}
+
+//modular 
+
+.wrapper {
+	max-width:1285px;
+	width:100%;
+}
+
+//Site Branding 
+
+.site-branding {
+	float:left;
+	display:inline-block;
+	width:20%;
+
+	  h1 {
+
+	  	a {
+	  		img {
+	  			margin-left:8rem;
+	  		}
+	  	}
+	  }
+}
+
+.main-navigation {
+	float:right;
+	display:inline-block;
+	clear:none;
+	width:60%;
+	margin-top:4rem;
+}
+
+
+//header 
+
+#masthead {
+	position:fixed;
+	width:100%;
+	background:#fff;
+	height:136px;
+	z-index:99999;
+}
+
+#masthead.sticky {
+  height: 98px;
+  text-align: left;
+  padding-left: 20px;
+  transition: all 0.4s ease;
+  -webkit-box-shadow: 0 2px 2px -2px #000000;
+  -moz-box-shadow: 0 2px 2px -2px #000000;
+  box-shadow: 0 2px 2px -2px #000000;
+}
+
+#masthead.sticky .main-navigation {
+	margin-top:3rem;
+	transition: all 0.4s ease;
+}
+
+#masthead.sticky .site-branding .site-title a img {
+	height:65px!important;
+	transition: all 0.4s ease;
+}
+
+//navigation 
+
+.main-navigation {
+
+	ul {
+
+		li {
+			padding:0px 15px;
+		}
+	}
+
+	a {
+		color:#4d4d4f;
+		font-family:"CoreSansDS35Regular";
+
+			&:hover {
+				color:#000;
+				text-decoration:underline;
+				transition-property: all;
+    			-webkit-transition-property: all;
+    			-moz-transition-property: all;
+			    -ms-transition-property: all;
+			    -o-transition-property: all;
+			    transition-timing-function: linear;
+			    -webkit-transition-timing-function: linear;
+			    -moz-transition-timing-function: linear;
+			    -ms-transition-timing-function: linear;
+			    -o-transition-timing-function: linear;
+			    transition-duration: 0.5s;
+			    -webkit-transition-duration: 0.5s;
+			    -moz-transition-duration: 0.5s;
+			    -ms-transition-duration: 0.5s;
+			    -o-transition-duration: 0.5s;
+			}
+	}
+}
+
+//About Us 
+
+.hero {
+	background-image:url(http://localhost:8888/FANexus/wp-content/uploads/2016/09/top_gold_people.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:50% 50%;
+	display: -webkit-flex;
+ 	display: flex;
+ 	height:700px;
+
+	.left {
+	flex-basis:50%;
+	-webkit-flex-basis:50%;
+	padding:18% 10%;
+
+		h2 {
+			color:#fff;
+			font-family:"CoreSansDS15Thin";
+			font-size:3rem;
+			font-weight:normal;
+			text-transform:uppercase;
+			letter-spacing:1px;
+			position:absolute;
+			top:300px;
+	 }
+	}
+
+	 .right {
+	 	background:rgba(14,13,11,0.8);
+	 	padding:18% 10%;
+	 	flex-basis:50%;
+		-webkit-flex-basis:50%;
+	 	position:relative;
+	 	padding:18% 10%;
+	 	
+	 	 p {
+	 	 	color: #fff;
+		    border: 1px solid #9c8e69;
+		    border-left: 20px solid rgba(47, 40, 25, 0.5);
+		    padding: 50px;
+		    max-width: 437px;
+		    height: 200px;
+		    position: absolute;
+		    left: -20px;
+		    font-family: "CoreSansDS25Light";
+		    top: 300px;
+	 	 }
+	 }
+  }
+
+  .gold-button {
+  	background:$gold;
+  	border-radius:0px;
+  	padding:10px;
+  	color:#fff;
+  	position:absolute;
+  	bottom:140px;
+  	left:170px;
+
+  		&:hover {
+  			background:darken($gold, 15%);
+  			color:#fff;
+  			-webkit-transition-duration: 0.5s; /* Safari */
+    		transition-duration: 0.5s;
+  		}
+
+  		&:visited {
+  			color:#fff;
+  		}
+  	
+  	font-family: "CoreSansDS25Light";
+  }
+
+  .gold-text {
+  	color:$gold;
+  	font-family:"CoreSansDS25LightItalic"
+  }
+
+  .about {
+  	background-image:url(http://localhost:8888/FANexus/wp-content/uploads/2016/09/about_bg.png);
+  	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:50% 50%;
+
+		.upper {
+			background:rgba(255,255,255, 0.8);
+			padding:7% 10%;
+		}
+
+		p {
+			font-family:"CoreSansDS35Regular";
+		}
+
+
+		.lower {
+			padding:7% 10%;
+			overflow:hidden;
+			background:rgba(6,6,6,0.7);
+
+			.third {
+				width:29.33%;
+				float:left;
+				margin-right:3.44%;
+				p {
+					text-align:center;
+					color:#fff;
+				}
+			}
+		}
+
+
+  }
+
+  #Layer_1 {
+  	text-align:center;
+  	width:40px;
+  	margin:20px auto;
+  	display:block;
+  }
+
+  .experience {
+  	background-image:url(http://localhost:8888/FANexus/wp-content/uploads/2016/09/experience_photo.png);
+  	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:50% 50%;
+	position:relative;
+	
+
+		.white {
+			background:rgba(255,255,255, 0.8);
+			padding: 10%;
+			position:relative;
+		}
+
+  	h2 {
+  		color:$gray;
+  		transform: rotate(-90deg);
+		transform-origin: left top 0;
+		position:absolute;
+		bottom:0px;
+		font-family:"CoreSansDS25Light";
+		font-size:2.15rem;
+		line-height:2.75rem;
+		font-weight:normal;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+  	}
+
+  	p {
+  		margin-left:8rem;
+  		font-family:"CoreSansDS35Regular";
+  	}
+
+  	.gold-line-title {
+		position: absolute;
+	    z-index: 999999;
+	    background-color: $gold;
+	    height: 1px;
+	    margin-bottom: 0px;
+	   	width: 200px;
+	    bottom: 90px;
+	    left: 0px;
+}
+  }
+
+  .short-gold {
+  	background-color:$gold;
+  	height:5px;
+  	margin-bottom:1rem;
+  	width:50px;
+  	margin-left:8rem;
+  }
+
+
+  .golden {
+  	display:block;
+  	color:#9c8e69;
+  	margin-bottom:1rem;
+  	font-family:"CoreSansDS35Regular";
+  	margin-top:20px;
+  }
+
+  .gold-bar {
+  	background:rgba(141, 129, 95, 0.8);
+  	padding:7% 10%;
+  	 p {
+  	 	text-align:center;
+  	 	color:#fff;
+  	 	margin:0px;
+  	 	max-width:100%;
+  	 	font-size:1.5rem;
+  	 	text-transform:uppercase;
+  	 	letter-spacing:1px;
+  	 	font-family:"CoreSansDS25Light";
+  	 }
+  }
+
+
+  .team {
+  	background-image:url(http://localhost:8888/FANexus/wp-content/uploads/2016/09/team_photo.png);
+  	background-repeat:no-repeat;
+  	background-size:cover;
+  	background-position:50% 50%;
+  	position:relative;
+  	padding:5% 10%;
+  	overflow:hidden;
+
+  		h2 {
+  		color:$gray;
+  		transform: rotate(-90deg);
+		transform-origin: left top 0;
+		position:absolute;
+		bottom:0px;
+		font-family:"CoreSansDS25Light";
+		font-size:2.15rem;
+		line-height:2.75rem;
+		font-weight:normal;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		left:180px;
+  		}
+
+  		.member {
+  			width:44%;
+  			margin:0% 2%;
+  			float:left;
+  			display:inline-block;
+
+  				.short-gold {
+  					margin-left:0px;
+  				}
+
+  				h3 {
+  					color:$gold;
+  					text-transform:uppercase;
+  					letter-spacing: 0.5px;
+  					font-family: "CoreSansDS55Bold"; 
+  					font-size:1rem;
+  					margin-bottom:5px;
+  				}
+
+  				p {
+  					margin-bottom:2px;
+  				}
+
+  				.bio {
+  					margin-top:10px;
+  				}
+  		}
+
+  		.gold-line-title {
+		position: absolute;
+	    z-index: 999999;
+	    background-color: $gold;
+	    height: 1px;
+	    margin-bottom: 0px;
+	   	width: 212px;
+	    bottom: 60px;
+	    left: 0px;
+}
+
+  }
+
+.readmore {
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+
+
+.services {
+	background-image:url(http://localhost:8888/FANexus/wp-content/uploads/2016/09/middle_woman_services.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:left;
+	display: -webkit-flex;
+ 	display: flex;
+ 	position:relative;
+
+	.left {
+	padding:8% 10%;
+	flex-basis:50%;
+	-webkit-flex-basis:50%;
+	position:relative;
+
+
+	.gold-line-title {
+		position: absolute;
+	    z-index: 999999;
+	    background-color: #fff;
+	    height: 1px;
+	    margin-bottom: 0px;
+	   	width: 212px;
+	    bottom: 90px;
+	    left: 0px;
+}
+
+		h2 {
+			transform: rotate(-90deg);
+			color:#fff;
+			font-family:"CoreSansDS25Light";
+			font-size:3rem;
+			font-weight:normal;
+			text-transform:uppercase;
+			letter-spacing:1px;
+			left:100px;
+			position:absolute;
+			bottom:145px;
+	 }
+
+
+	 	p {
+	 		margin-left:8rem;
+	 		color:#fff;
+	 		max-width:450px;
+	 		margin-bottom:1rem;
+	 	}
+	}
+
+	 .right {
+	 	background:rgba(14,13,11,0.8);
+	 	padding:8% 5%;
+	 	flex-basis:50%;
+		-webkit-flex-basis:50%;
+	 	position:relative;
+	 	
+	 	 ul {
+	 	 	list-style-type:none;
+	 	 	margin-left:0px;
+
+	 	 	li {
+	 	 		color:#fff;
+	 	 		padding:0.5rem;
+	 	 		max-width:437px;
+	 	 		font-family:"CoreSansDS25Light";
+	 	 		display:block;
+	 	 		padding-left:20px;
+
+	 	 		#Layer_1 {
+	 	 			width:25px;
+	 	 			margin:0px 8px 0px 0px;
+	 	 			height:100%;
+	 	 			display:inline-block;
+
+	 	 		}
+	 	 }
+	 }
+  }
+}
+
+.wow {
+	margin-left:8rem;
+}
+
+.services-bottom {
+	background-image:url(http://localhost:8888/FANexus/wp-content/uploads/2016/09/callout_bottom.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	background-size:cover;
+	padding:5% 10%;
+
+	p {
+		font-family:"CoreSansDS35Regular";
+	}
+
+		.golden {
+			text-transform:uppercase;
+			font-family: "CoreSansDS55Bold"; 
+		}
+
+}
+
+
+//popup 
+.popup {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+}
+
+.popup-inner {
+  max-width: 700px;
+  width: 90%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+  border-radius: 0px;
+  background: #fff;
+  z-index: 99999999;
+}
+
+.popup-close {
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transition: ease 0.25s all;
+  -webkit-transform:translate(50%, -50%);
+  transform:translate(50%, -50%);
+  border-radius: 1000px;
+  background: rgba(0,0,0,0.8);
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100%;
+  color: #fff!important;
+}
+
+.popup-close:hover {
+  background: rgba(0,0,0,1);
+  text-decoration: none;
+  color: #fff;
+}
+
+//footer 
+
+#colophon {
+	display: -webkit-flex;
+ 	display: flex;
+ 	flex-direction:row;
+}
+
+.contact-form {
+	background:#252525;
+	flex-basis:60%;
+	-webkit-flex-basis:60%;
+	float:left;
+	padding:2% 5% 0% 5%;
+	position:relative;
+
+		h2 {
+			transform: rotate(-90deg);
+			color:#fff;
+			bottom:40px;
+			position:absolute;
+			font-family:"CoreSansDS15Thin";
+			font-size:3rem;
+			text-transform:uppercase;
+			letter-spacing: 1px;
+			right:26rem;
+
+		}
+
+		.gold-line-title {
+			position: absolute;
+		    z-index: 999999;
+		    background-color: $gold;
+		    height: 4px;
+		    margin-bottom: 0px;
+		   	width: 60px;
+		    bottom: 0px;
+		    right:30rem;
+		}
+}
+
+.wpcf7-form {
+	max-width:400px;
+	background:#fff;
+	position:absolute;
+	top:3.65rem;
+	bottom:0;
+	padding:4%;
+	right:45px;
+}
+
+.wpcf7-textarea {
+	resize:none;
+	max-height:100px;
+	border-bottom: rgba(0, 0, 0, 0.6) 1px solid !important;
+    border-top: 0px !important;
+    border-right: 0px!important;
+    border-left: 0px!important;
+    border-bottom-right-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+}
+
+.wpcf7-text {
+	border-bottom: rgba(0, 0, 0, 0.6) 1px solid !important;
+    border-top: 0px !important;
+    border-right: 0px!important;
+    border-left: 0px!important;
+    border-bottom-right-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+    width:100%!important;
+}
+
+input[type="text"]:focus {
+	-webkit-box-shadow: none;
+    outline: 2px solid #000;
+     -webkit-transition-duration: 5s; /* Safari */
+    transition-duration: 5s;
+}
+
+.wpcf7-submit {
+	border:0px!important;
+	box-shadow:none!important;
+	border-radius:0px!important;
+	background:transparent!important;
+	color:$gold!important;
+	font-family:"CoreSansDS35Regular";
+	text-transform:uppercase;
+	float:right;
+}
+
+.contact-info {
+	background-image:url(http://localhost:8888/FANexus/wp-content/uploads/2016/09/fae3.png);
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	flex-basis:40%;
+	-webkit-flex-basis:40%;
+	float:right;
+	flex:1;
+	padding:6% 4% 3% 4%;
+
+	 #Layer_1 {
+	 	text-align:left;
+	 	display:inline;
+	 	width:65px;
+	 }
+
+	 p {
+	 	color:#fff;
+
+	 	&:first-child {
+	 		margin-bottom:0px;
+	 	}
+	 
+	 	&:nth-child(even) {
+	 			margin-bottom:8px;
+	 		}
+	 }
+
+	 a {
+	 	color:#fff;
+	 }
+
+	 hr {
+	 	background-color:#fff;
+	 	height:3px;
+	 	width:25px;
+	 	float:left;
+	 	clear:both;
+	 	margin-bottom:10px;
+	 }
+
+	 ul {
+	 	margin:0px;
+	 	padding:0px;
+	 	list-style-type:none;
+
+	 	  li {
+	 	  	display:inline-block;
+
+	 	  	 a {
+	 	  	 	text-decoration:none;
+	 	  	 	font-family:"CoreSansDS25Light";
+	 	  	 	text-transform:uppercase;
+	 	  	 	letter-spacing: 1px;
+	 	  	 	font-size:0.85rem;
+	 	  	 }
+	 	  }
+	 }
+}
+
+.footer-menu {
+	padding:2% 5%;
+	overflow:hidden;
+
+	.main-navigation {
+		float:left;
+		margin-top:2rem;
+		margin-left:8rem;
+	}
+
+	p {
+		float:right;
+	}
+} 
+
+//back top top
+
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(232, 98, 86, 0.8) url(http://localhost:8888/FANexus/wp-content/uploads/2016/09/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+//responsive 
+
+
+@media screen and (max-width:992px) {
+	.team h2 {
+		left:100px;
+	}
+
+	.wow {
+		margin-left:6rem;
+	}
+
+	.services .left h2 {
+		left:40px;
+	}
+
+	.services .left p {
+		margin-left:6rem;
+	}
+}
+
+@media screen and (max-width:900px) {
+	.site-branding h1 a img {
+		margin-left:3rem;
+	}
+
+	.main-navigation {
+		width:70%;
+	}
+}
+
+@media screen and (max-width:850px) {
+	.gold-button {
+		left:90px;
+	}
+}
+
+
+@media screen and (max-width:800px) {
+	.contact-form h2 {
+		font-size:2rem;
+	}
+
+	.hero .left h2 {
+		font-size:2.5rem;
+	}
+}
+
+
+@media screen and (max-width:767px) {
+	.about .lower .third {
+		width:100%;
+		float:none;
+		display:block;
+	}
+
+	.experience h2 {
+		position:relative;
+		transform:none;
+		bottom:0px;
+	}
+
+	.experience h2 br {
+		display:none;
+	}
+
+	.experience p {
+		max-width:100%;
+		margin-left:0px;
+	}
+
+	.team h2, .services .left h2 {
+		position:relative;
+		transform:none;
+		bottom:0px;
+		left:0px;
+	}
+
+	.services .left p {
+		margin-left:0px;
+	}
+
+	.wow {
+		max-width:100%;
+		margin:0px;
+	}
+
+	.team .member {
+		width:100%;
+		float:none;
+		display:block;
+		margin-bottom:1rem;
+	}
+
+	.wpcf7-form {
+		max-width:300px;
+		top:10px;
+	}
+
+	.contact-form h2 {
+		right:19rem; 
+	}
+
+	#masthead {
+	height:auto;
+  }
+
+  .main-navigation {
+  	width:100%;
+  	margin-top:0px!important;
+  }
+
+  .main-navigation ul li {
+  	display:block;
+  	float:none;
+  	padding:4px 15px;
+  }
+
+  .menu-toggle, .main-navigation.toggled ul {
+    display: block;
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-delay: 2s;
+    margin-left:2rem;
+}
+
+   #masthead.sticky {
+   	height:auto;
+   }
+
+  .mobile-toggle {
+  	float:right;
+  	cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 22px;
+    top: 60px;
+    width: 30px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+    background:transparent;
+  }
+
+  button {
+  	background:transparent;
+  	box-shadow:none;
+  	padding:0px;
+  	margin:0px;
+  	border:0px;
+  }
+
+  button:focus {
+  	outline:none;
+  	border-color: 0px;
+    box-shadow: inset 0px;
+  }
+
+
+  .mobile-toggle span {
+  	width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: $gray;
+    display: block;
+  }
+
+  .toggled .mobile-toggle {
+  	transform: rotate(-90deg);
+ -webkit-transform: rotate(-90deg)
+  }
+}
+
+@media screen and (max-width:650px) {
+
+	.hero {
+		flex-direction: column;
+		-webkit-flex-direction:column;
+		height:768px;
+	}
+
+	.hero .left h2 {
+		position:relative;
+		top:60px;
+	}
+
+	.hero .left {
+		flex-basis:100%;
+		-webkit-flex-basis:100%;
+		position:relative;
+	}
+
+	.hero .right {
+		flex-basis:100%;
+		-webkit-flex-basis:100%;
+		padding:12% 10%;
+	}
+
+	.hero .right p {
+		position:relative;
+		top:0px;
+		border-left:20px solid $gold;
+	}
+
+	.gold-button {
+		position:relative;
+		bottom:-25px;
+		left:0px;
+	}
+
+	.services {
+		flex-direction:column;
+		-webkit-flex-direction:column;
+	}
+
+
+	.services .left {
+		flex-basis:100%;
+		-webkit-flex-basis:100%;
+	}
+
+	.services .right {
+		flex-basis:100%;
+		-webkit-flex-basis:100%;
+	}
+
+	.services .right ul {
+		padding:0px;
+	}
+
+	#colophon {
+		flex-direction: column;
+		-webkit-flex-direction:column;
+	}
+
+	.contact-form, .contact-info {
+		flex-basis:100%;
+		-webkit-flex-basis:100%;
+	}
+
+	.wpcf7-form {
+		position:relative;
+		right:0px;
+		top:0px;
+		max-width:650px;
+	}
+
+	.contact-form h2 {
+		position:relative;
+		transform:none;
+		bottom:0px;
+		top:15px;
+		right:0px;
+	}
+  }
+
+  @media screen and (min-width: 767px) {
+.menu-toggle {
+    display: none;
+ }
+}
+
+
+.team h2:after {
+	content:"";
+	border-bottom:20px;
+}
