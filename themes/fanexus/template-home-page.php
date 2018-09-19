@@ -79,15 +79,7 @@
 						<p class="bio">Eric Warlick brings 23 years' experience in RIA and custody/clearing sales to his new role as president of FA Nexus. In recent years, he served as managing partner and co-founder of an RIA platform...<a href="#" class="btn readmore" data-popup-open="popup-1">Read More ></a></p>
 			</div>
 
-			<!--
-			<div class="member">
-				<img src="/wp-content/uploads/2017/05/new_dc.png"/>
-				<hr class="short-gold">
-					<h3>Derrick Clouser, Managing Partner</h3>
-						<p>503.422.5673</p>
-						<p><a href="mailto:dclouser@fa-nexus.com">dclouser@fa-nexus.com</a></p>
-						<p class="bio">With 28 years in the financial services industry, Derrick Clouser has worked at many of the major wirehouses including Merrill Lynch, Morgan Stanley and UBS. As an entrepreneur, Derrick has owned ...<a href="#" class="btn readmore" data-popup-open="popup-2">Read More ></a></p>
-			</div>-->
+
 
 	    </div>
 	   </div>
