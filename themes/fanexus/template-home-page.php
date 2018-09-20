@@ -70,13 +70,23 @@
 		<h2>our team</h2>
 		<hr class="gold-line-title">
 		 <div class="wow">
-			<div class="member" id="first-member">
-				<img src="/wp-content/uploads/2017/05/328456901504780.TC5PIDJbOem5CZ5ECDDB_height640.png"/>
-				<hr class="short-gold">
-					<h3>Eric Warlick, President</h3>
-						<p>503.360.2943</p>
-						<p><a href="mailto:ewarlick@fa-nexus.com">ewarlick@fa-nexus.com</a></p>
-						<p class="bio">Eric Warlick brings 23 years' experience in RIA and custody/clearing sales to his new role as president of FA Nexus. In recent years, he served as managing partner and co-founder of an RIA platform...<a href="#" class="btn readmore" data-popup-open="popup-1">Read More ></a></p>
+			<div class="member">	
+	
+				<?php if( have_rows('team_members') ): ?>
+					<?php while( have_rows('team_members') ): the_row(); 
+						$image_object = get_sub_field('image');
+						$image_size = 'large';
+						$image_url = $image_object['sizes'][$image_size];
+					?>
+					<img src="<?php echo $image_url; ?>"/>
+					<hr class="short-gold">
+						<h3><?php the_sub_field('name'); ?></h3>
+						<p><?php the_sub_field('tel'); ?></p>
+						<p><a href="mailto:<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
+						<p class="bio"><?php the_sub_field('bio-short'); ?></p>			    		    		
+					
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</div>
 
 
