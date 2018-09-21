@@ -66,34 +66,73 @@
 
 
 	<div class="team" id="OurTeam">
-	<div class="wrapper">
-		<h2>our team</h2>
-		<hr class="gold-line-title">
-		 <div class="wow">
-			<div class="member">	
-	
-				<?php if( have_rows('team_members') ): ?>
-					<?php while( have_rows('team_members') ): the_row(); 
-						$image_object = get_sub_field('image');
-						$image_size = 'large';
-						$image_url = $image_object['sizes'][$image_size];
-					?>
-					<img src="<?php echo $image_url; ?>"/>
-					<hr class="short-gold">
+		<div class="wrapper">
+			<h2>our team</h2>
+			<hr class="gold-line-title">
+			 <div class="wow">
+				<div class="member">	
+		
+					<?php if( have_rows('team_members') ): ?>
+						<?php while( have_rows('team_members') ): the_row(); 
+							$image_object = get_sub_field('image');
+							$image_size = 'large';
+							$image_url = $image_object['sizes'][$image_size];
+
+							static $x = 1;
+							$popup = "popup-";
+						    $popup_num = $x; 
+
+							
+						    echo $x;
+						    $x++;
+						?>
+						
+						<img src="<?php echo $image_url; ?>"/>
+						<hr class="short-gold">
 						<h3><?php the_sub_field('name'); ?></h3>
 						<p><?php the_sub_field('tel'); ?></p>
 						<p><a href="mailto:<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a></p>
-						<p class="bio"><?php the_sub_field('bio-short'); ?></p>			    		    		
-					
-					<?php endwhile; ?>
-				<?php endif; ?>
-			</div>
+						<p class="bio"><?php the_sub_field('bio-short'); ?><a href="#" class="btn readmore" data-popup-open="<?php echo $popup . $popup_num; ?>">Read More ></a></p>
+						
+						<?php endwhile; ?>
+					<?php endif; ?>
 
-
-
-	    </div>
+				</div>
+		    </div>
 	   </div>
 	</div>
+
+<!-- 	<div class="popup" data-popup="'popup-1">
+	  <div class="popup-inner">
+
+	<?php if( have_rows('team_members') ): ?>
+	      <?php while( have_rows('team_members') ): the_row(); 
+	        $image_object = get_sub_field('image');
+	        $image_size = 'medium';
+	        $image_url = $image_object['sizes'][$image_size];
+	    
+	        // static $x = 1;
+	        //   echo $x;
+	        //   $x++; 
+	      ?>
+
+	          <h3>About <?php the_sub_field('name'); ?></h3>
+	          <p class=""><img src="<?php echo $image_url; ?>"/><?php the_sub_field('bio-short'); ?></p>
+	          <a href="#" class="popup-close" data-popup-close="popup-1">x</a>
+
+	    <?php endwhile; ?>
+	  <?php endif; ?>
+
+	    </div>
+	</div> -->
+
+<!-- 	<div class="popup" data-popup="popup-1">
+	  <div class="popup-inner">
+	    <h2>About Eric Warlick</h2>
+	    <p><img src="http://l3z.3c6.myftpupload.com/wp-content/uploads/2017/05/new1f.png"/> Eric Warlick brings 23 years’ experience in RIA and custody/clearing sales to his new role as president of FA Nexus. In recent years, he served as managing partner and co-founder of an RIA platform services provider, with $2.3 billion in assets, and principal and co-founder of Martin Capital Partners, a $140 million RIA. He previously served as a vice president of TD Ameritrade, Fidelity Investments and Schwab Institutional. He earned a bachelor’s degree from the University of Oregon. Eric can be reached at 503.360.2943 and <a href="mailto:ewarlick@fa-nexus.com">ewarlick@FA-Nexus.com</a></p>
+	    <a href="#" class="popup-close" data-popup-close="popup-1">x</a>
+	  </div>
+	</div> -->
 
 
 	<div class="services" id="services">
@@ -121,7 +160,7 @@
 				<p>A customized plan developed by FA Nexus will facilitate a smooth transition as you expand your team, grow your book, make the move to independence or select a custodian. We can provide whatever you need to make the change you desire a reality.</p>
 
 				<p class="golden">Let FA Nexus be your strategic partner for change. Contact us today.</p>
-	</div>
+			</div>
 
 
 

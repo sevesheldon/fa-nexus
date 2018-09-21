@@ -40,12 +40,34 @@
 
       </div>
 
+<!-- <div class="popup" data-popup="'popup-1">
+  <div class="popup-inner">
+
+<?php if( have_rows('team_members') ): ?>
+      <?php while( have_rows('team_members') ): the_row(); 
+        $image_object = get_sub_field('image');
+        $image_size = 'medium';
+        $image_url = $image_object['sizes'][$image_size];
+    
+        // static $x = 1;
+        //   echo $x;
+        //   $x++; 
+      ?>
+
+          <h3>About <?php the_sub_field('name'); ?></h3>
+          <p class=""><img src="<?php echo $image_url; ?>"/><?php the_sub_field('bio-short'); ?></p>
+          <a href="#" class="popup-close" data-popup-close="popup-1">x</a>
+
+    <?php endwhile; ?>
+  <?php endif; ?>
+
+    </div>
+</div> -->
 
 <div class="popup" data-popup="popup-1">
   <div class="popup-inner">
-    <h2>About Eric Warlick</h2>
+    <h2>About Eric Warlick, President</h2>
     <p><img src="http://l3z.3c6.myftpupload.com/wp-content/uploads/2017/05/new1f.png"/> Eric Warlick brings 23 years’ experience in RIA and custody/clearing sales to his new role as president of FA Nexus. In recent years, he served as managing partner and co-founder of an RIA platform services provider, with $2.3 billion in assets, and principal and co-founder of Martin Capital Partners, a $140 million RIA. He previously served as a vice president of TD Ameritrade, Fidelity Investments and Schwab Institutional. He earned a bachelor’s degree from the University of Oregon. Eric can be reached at 503.360.2943 and <a href="mailto:ewarlick@fa-nexus.com">ewarlick@FA-Nexus.com</a></p>
-    <!--<p><a href="#" data-popup-close="popup-1">Close</a></p>-->
     <a href="#" class="popup-close" data-popup-close="popup-1">x</a>
   </div>
 </div>
@@ -53,9 +75,9 @@
 
 		<div class="popup" data-popup="popup-2">
   <div class="popup-inner">
-    <h2>About Derrick Clouser</h2>
-    <p><img src="http://fa-nexus.com/wp-content/uploads/2017/05/new2f.png"/>With 28 years in the financial services industry, Derrick Clouser has worked at many of the major wirehouses, including Merrill Lynch, Morgan Stanley and UBS. As an entrepreneur, Derrick has owned and run a successful RIA. He brings expertise in helping advisors transition from commission-based business to full wealth management fee-based business, helping each advisor grow quickly in revenue by 40 percent to 100 percent. For those planning to go independent, Derrick’s experience in transitioning advisors through succession planning into retirement is paramount. Derrick can be reached at 503-422-5673 or <a href="mailto:dclouser@fa-nexus.com">dclouser@FA-Nexus.com</a></p>
-    <!--<p><a href="#" data-popup-close="popup-2">Close</a></p>-->
+    <h2>About Leslie Picco, VP Sales Management</h2>
+    <p><img src="http://l3z.3c6.myftpupload.com/wp-content/uploads/2018/09/Leslie-Headshot_Web.png"/>With over a decade of experience in business development and managing client relations, her attention to detail, enthusiasm and sincere desire for client concerns, have proven to be a successful, results-driven formula for all parties throughout each partnership experience. <br>
+    Born and raised in Oregon, Leslie takes pride in serving her community through participation in various fundraising events, and serves as vice president on a local non-profit board. She enjoys experiencing all the beauty of the Pacific Northwest, be it hiking, wine tasting, heading to the beach, or listening to live music at any of the great Portland venues. A graduate from the University of Oregon, Leslie’s a big fan of college football, and enjoys cheering on the Ducks with her two young children.</p>
     <a href="#" class="popup-close" data-popup-close="popup-2">x</a>
   </div>
 </div>
@@ -63,9 +85,10 @@
 
 <div class="popup" data-popup="popup-3">
   <div class="popup-inner">
-    <h2>About John Noble</h2>
-    <p><img src="http://fa-nexus.com/wp-content/uploads/2017/05/noble_small.png"/>With more than 30 years’ experience on the correspondent side of the financial advisory business, John Noble is now managing director of FA Nexus. Most recently an independent wealth management consultant based in Portland, Oregon, he previously launched Umpqua Investments, a division of Umpqua bank, and served as president/CEO of the company, which had $20 million in revenue and recruited 33 financial advisors. He also served as regional director of UBS, with 125 advisors and $20 billion assets under management, and he was a branch manager at Smith Barney for more than two decades. He studied economics at the University of California, Los Angeles. He is based in Santa Barbara, California.</p>
-    <!--<p><a href="#" data-popup-close="popup-2">Close</a></p>-->
+    <h2>About John Shepherd, VP Sales & Marketing</h2>
+    <p><img src="http://l3z.3c6.myftpupload.com/wp-content/uploads/2018/09/John-Headshot_Web.png"/>He is also a vice president responsible for sales and marketing. John’s passion for creating highly efficient and customized strategies has led to his recognition as a leading innovator in the institutional investment industry, broker dealer, RIA and Family Office environments.<br>
+    Prior to joining FA-Nexus, John served as Portfolio Manager for CUNA Brokerage, Wealth Manager in Banking Institutions and Managing Director at Lateef Investment Management.  John also served as a vice president at Fidelity Investments, Hartford Insurance and MFS. He is a graduate of the St. Anselm College and an honors graduate of the CCNY Business School.   John’s experience and expertise in the investment industry have earned him a multitude of recognition. John and his wife Susan are active in the philanthropic community, donating significant time and energy to the non-for profit and to policy making efforts.<br>
+    John is an author, golfer, and avid fitness buff. Susan and John’s children Lindsay and Jack work in the investment management industry as well.</p>
     <a href="#" class="popup-close" data-popup-close="popup-3">x</a>
   </div>
 </div>
