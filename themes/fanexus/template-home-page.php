@@ -83,7 +83,7 @@
 						    $popup_num = $x; 
 
 							
-						    echo $x;
+						    // echo $x;
 						    $x++;
 						?>
 						
